@@ -10,12 +10,8 @@ use Illuminate\Validation\ValidationException;
 class NewsletterController extends Controller
 {
 
-    public function __construct()
-    {
-        
-    }
-
-    public function subscribe(string $email)
+    // public function subscribe(string $email)
+    public function __invoke(string $email)
     {
         request()->validate(['email' => 'required|email']);
 

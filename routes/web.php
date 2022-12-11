@@ -4,11 +4,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SocialLoginController;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +18,10 @@ use Laravel\Socialite\Facades\Socialite;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/home', function () {
     return view('home');
 });
 
